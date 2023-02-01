@@ -1,5 +1,5 @@
 import React from 'react'
-import CopyToClipboard from "react-copy-to-clipboard";
+import "../assent/Font.css"
 
 export const Link = ({link , short}) => {
   const styles = {
@@ -8,8 +8,17 @@ export const Link = ({link , short}) => {
       marginLeft:"30vw",        
     },
     holboos:{
-      color:"grey"
+      color:"grey",
+      fontFamily:'Ubuntu',
     },
+    button:{
+      color:"green",
+      background:"none",
+      border:"none",
+      marginLeft:"20vw",
+      marginTop:"-10vh",
+      fontFamily:'Ubuntu',
+    }
   }
   return (
     <div>
@@ -18,11 +27,8 @@ export const Link = ({link , short}) => {
         <p>{link}</p>
         <p style={styles.holboos}>Богино холбоос</p>
         <p>{short}</p>
+      <button onClick={() => {navigator.clipboard.writeText(short)}} style={styles.button}>Хуулж авах</button>
     </div>
-      <CopyToClipboard onClick={() => {navigator.clipboard.writeText(short)}} > 
-      <a href={short}>Хуулж авах</a>
-      
-      </CopyToClipboard>
     </div>
   )
 }

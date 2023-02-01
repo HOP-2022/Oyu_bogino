@@ -1,14 +1,17 @@
 import React from 'react'
+import "../assent/Font.css"
 
 export const Footer = () => {
   const styles = {
     black:{
-      color:"black"
+      color:"black",
+      fontFamily:'Ubuntu',
     },
     white:{
       color:"grey",
       marginBottom:"-2vh",
       marginLeft:"-8vw",
+      fontFamily:'Ubuntu',
     },
     Footer:{
       display:"flex",
